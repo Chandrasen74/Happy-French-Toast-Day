@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.contain-smoke,
+.crust-bottom,
+.crust,
+.toast,
+.toast-bottom,
+.toaster-back,
+.toaster-back:after,
+.toaster,
+.base:before,
+.base,
+.knob-base,
+.knob {
+  position: absolute;
+}
+
+body {
+  background: #8FBC8F;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  line-height: 10px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 250px;
+}
+
+/* Controls */
+#run, #reset {
+  width: 83px;
+  height: 83px;
+  top: 318px;
+  left: 80px;
+  background: #888;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+#run:focus, #reset:focus {
+  outline: 0;
+}
+
+#reset {
+  left: 164px;
+}
+
+/*  Main Container */
+.container {
+  width: 330px;
+  height: 320px;
+  margin: auto;
+  position: relative;
+  border-bottom: none;
+}
+
+/* Smoke */
+.contain-smoke {
+  width: 50px;
+  height: 120px;
+  top: 80px;
+  opacity: 0;
+}
+
+.smoke {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.right {
+  border-right: 4px solid #231F20;
+}
+
+.left {
+  border-left: 4px solid #231F20;
+}
+
+.contain-smoke:nth-child(1) {
+  left: 160px;
+}
+
+.contain-smoke:nth-child(2) {
+  left: 120px;
+}
+
+/* toaster */
+.toaster-back {
+  top: 175px;
+  left: 50px;
+  width: 170px;
+  height: 110px;
+  border-radius: 30px 30px 10px 10px;
+  border: 7px solid #231F20;
+  background: #888;
+}
+.toaster-back:after {
+  content: " ";
+  top: -7px;
+  left: 15px;
+  width: 170px;
+  height: 110px;
+  border-radius: 30px 30px 10px 10px;
+  border: 7px solid #231F20;
+}
+
+.toaster {
+  top: 175px;
+  left: 95px;
+  width: 170px;
+  height: 110px;
+  border-radius: 30px 30px 10px 10px;
+  border: 7px solid #231F20;
+  background: #FF0000;
+}
+
+.base {
+  width: 170px;
+  height: 3px;
+  top: 291px;
+  left: 95px;
+  background: #888;
+  border-radius: 5px;
+  border: 7px solid #231F20;
+}
+.base:before {
+  content: "";
+  width: 35px;
+  height: 3px;
+  top: -7px;
+  left: -48px;
+  background: #888;
+  border: 7px solid #231F20;
+  border-radius: 5px;
+}
+
+.knob-base {
+  top: 190px;
+  left: 110px;
+  width: 23px;
+  height: 23px;
+  background: #888;
+  border-radius: 50px;
+  border: 7px solid #231F20;
+}
+
+.knob {
+  top: 190px;
+  left: 122px;
+  width: 23px;
+  height: 23px;
+  background: white;
+  border-radius: 50px;
+  border: 7px solid #231F20;
+}
+
+/* bread */
+.crust {
+  width: 50px;
+  height: 15px;
+  top: 120px;
+  left: 86px;
+  background: #CCB26E;
+  border-radius: 20px;
+  border: 7px solid #231F20;
+}
+
+.crust-bottom {
+  width: 40px;
+  height: 60px;
+  top: 147px;
+  left: 94px;
+  background: #CCB26E;
+  border: 7px solid #231F20;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 10px;
+}
+
+.toast {
+  width: 100px;
+  height: 15px;
+  top: 120px;
+  left: 98px;
+  background: #E4D8BE;
+  border-radius: 20px;
+  border: 7px solid #231F20;
+}
+
+.toast-bottom {
+  width: 85px;
+  height: 65px;
+  top: 142px;
+  left: 106px;
+  background: #E4D8BE;
+  border: 7px solid #231F20;
+  border-top: none;
+  border-radius: 5px;
+}
+
+.crust-bottom.front {
+  top: 142px;
+  left: 128px;
+}
+
+.crust.front {
+  top: 120px;
+  left: 121px;
+}
+
+.toast.front {
+  top: 120px;
+  left: 133px;
+}
+
+.toast-bottom.front {
+  top: 142px;
+  left: 140px;
+}
+
+/* animations */
+.makeToast {
+  -webkit-animation: makeToast 5s linear;
+          animation: makeToast 5s linear;
+}
+
+.darkToast {
+  -webkit-animation: darkToast 5s forwards;
+          animation: darkToast 5s forwards;
+}
+
+.darkCrust {
+  -webkit-animation: darkCrust 5s forwards;
+          animation: darkCrust 5s forwards;
+}
+
+.moveKnob {
+  -webkit-animation: moveKnob 5s linear;
+          animation: moveKnob 5s linear;
+}
+
+.hotToaster {
+  -webkit-animation: hotToaster 5s linear;
+          animation: hotToaster 5s linear;
+}
+
+.smokeAppear {
+  -webkit-animation: smokeAppear 5s linear;
+          animation: smokeAppear 5s linear;
+}
+
+@-webkit-keyframes makeToast {
+  10%, 90% {
+    transform: translateY(90px);
+  }
+  92% {
+    transform: translateY(0px);
+  }
+  95% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes makeToast {
+  10%, 90% {
+    transform: translateY(90px);
+  }
+  92% {
+    transform: translateY(0px);
+  }
+  95% {
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes darkToast {
+  30% {
+    background: #E4D8BE;
+  }
+  to {
+    background: #98836E;
+  }
+}
+@keyframes darkToast {
+  30% {
+    background: #E4D8BE;
+  }
+  to {
+    background: #98836E;
+  }
+}
+@-webkit-keyframes darkCrust {
+  30% {
+    background: #CCB26E;
+  }
+  to {
+    background: #4B3621;
+  }
+}
+@keyframes darkCrust {
+  30% {
+    background: #CCB26E;
+  }
+  to {
+    background: #4B3621;
+  }
+}
+@-webkit-keyframes moveKnob {
+  10%, 92% {
+    transform: translateX(-12px);
+  }
+  95% {
+    transform: translateX(0px);
+  }
+}
+@keyframes moveKnob {
+  10%, 92% {
+    transform: translateX(-12px);
+  }
+  95% {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes hotToaster {
+  80% {
+    background: #850000;
+  }
+}
+@keyframes hotToaster {
+  80% {
+    background: #850000;
+  }
+}
+@-webkit-keyframes smokeAppear {
+  30% {
+    opacity: 0.1;
+    transform: skewX(2deg);
+  }
+  70% {
+    opacity: 0.4;
+    transform: skewY(10deg);
+  }
+  75% {
+    opacity: 0.3;
+    transform: skewX(-2deg);
+  }
+}
+@keyframes smokeAppear {
+  30% {
+    opacity: 0.1;
+    transform: skewX(2deg);
+  }
+  70% {
+    opacity: 0.4;
+    transform: skewY(10deg);
+  }
+  75% {
+    opacity: 0.3;
+    transform: skewX(-2deg);
+  }
+}
